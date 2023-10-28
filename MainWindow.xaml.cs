@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -27,9 +28,19 @@ namespace stalcraft_observer
             InitializeComponent();
         }
 
-        private void ButtonGetHistory_Click(object sender, RoutedEventArgs e)
+        private async void ButtonGetHistory_Click(object sender, RoutedEventArgs e)
         {
+            List<Prices> Prices = new List<Prices>();
+            string  body = await HTTPrequest.get("y1q9");
+            var pricesListing = JsonConvert.DeserializeObject<PricesListing>(body);
 
+            foreach (Prices prices in pricesListing.prices)
+            {
+                Prices.Add(prices);
+            }
+
+            ShowRequest showRequest = new ShowRequest(Prices);
+            showRequest.Show();
         }
     }
 }
