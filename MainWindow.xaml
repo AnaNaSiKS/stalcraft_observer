@@ -1,0 +1,29 @@
+﻿<Window x:Class="stalcraft_observer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:stalcraft_observer"
+        mc:Ignorable="d"
+        Title="AuctionHistory" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <DockPanel Grid.Column="0" >
+            <ComboBox VerticalAlignment="Top">
+                <TextBlock Text="assault_rifle"/>
+                <TextBlock Text="device"/>
+                <TextBlock Text="heavy"/>
+                <TextBlock Text="machine_gun"/>
+                <TextBlock Text="melee"/>
+                <TextBlock Text="pistol"/>
+                <TextBlock Text="shotgun_rifle"/>
+                <TextBlock Text="sniper_rifle"/>
+                <TextBlock Text="submachine_gun"/>
+            </ComboBox>
+            <Button VerticalAlignment="Bottom" Height="60" Name="ButtonGetHistory" Click="ButtonGetHistory_Click"/>
+        </DockPanel>
+    </Grid>
+</Window>
