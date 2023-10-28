@@ -10,9 +10,11 @@ namespace stalcraft_observer
 {
     internal class HTTPrequest// Класс запросы с помощью HTTP протокола
     {
-        static HttpClient httpClient = new HttpClient();//гарантирует 1 экземпляр htppClient
+        //Поле HttpClient, единственное для всех объектов
+        static HttpClient httpClient = new HttpClient();
 
-        public static async Task<string> get(string item) {
+        //Принимает название предмета, возвращает строку в формате Json
+        public static async Task<string> get(string item) { 
             using HttpRequestMessage request = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
