@@ -11,7 +11,7 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-        <DockPanel Grid.Column="0" >
+        <StackPanel Grid.Column="0" >
             <ComboBox VerticalAlignment="Top">
                 <TextBlock Text="assault_rifle"/>
                 <TextBlock Text="device"/>
@@ -24,6 +24,6 @@
                 <TextBlock Text="submachine_gun"/>
             </ComboBox>
             <Button VerticalAlignment="Bottom" Height="60" Name="ButtonGetHistory" Click="ButtonGetHistory_Click"/>
-        </DockPanel>
+        </StackPanel>
     </Grid>
 </Window>

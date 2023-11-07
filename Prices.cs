@@ -12,11 +12,11 @@ namespace stalcraft_observer
         public int Amount { get; set; }
         public long Price { get; set; }
         public DateTime Time { get; set; }
-        public object Additional { get; set; }
+        public object? Additional { get; set; }
 
-        //public override string ToString()
-        //{
-        //    return "Кол-во: " + Amount.ToString() +" Цена: "+ PriceValue.ToString() + " Время продажи: " + Time.ToString();
-        //}
+        public override string ToString()
+        {
+            return "Кол-во: " + Amount.ToString() + " Цена: " + Price.ToString() + " Время продажи: " + Time.ToString();
+        }
     }
 }

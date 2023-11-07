@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ScottPlot;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,18 @@ namespace stalcraft_observer
             InitializeComponent();
 
             DataGrid.ItemsSource = prices;
+
+            List<double> values = new List<double>();
+
+            foreach (var value in prices)
+            {
+                values.Add(value.Price);
+            }
+            
+            Chart.Plot.AddBar(values.ToArray());
+
+            //Chart.Plot.SetAxisLimits(yMin: 0);
+            Chart.Refresh();
         }
     }
 }

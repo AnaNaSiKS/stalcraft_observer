@@ -9,7 +9,7 @@ namespace stalcraft_observer
     internal class PricesListing
     {
         public long total;
-        public Prices[] prices;
+        public Prices[]? prices;
         public override string ToString()
         {
             return base.ToString();

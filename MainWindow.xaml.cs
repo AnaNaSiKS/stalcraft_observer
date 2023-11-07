@@ -30,17 +30,9 @@ namespace stalcraft_observer
 
         private async void ButtonGetHistory_Click(object sender, RoutedEventArgs e)
         {
-            List<Prices> Prices = new List<Prices>();
-            string  body = await HTTPrequest.get("y1q9");
-            var pricesListing = JsonConvert.DeserializeObject<PricesListing>(body);
-
-            foreach (Prices prices in pricesListing.prices)
-            {
-                Prices.Add(prices);
-            }
-
-            ShowRequest showRequest = new ShowRequest(Prices);
-            showRequest.Show();
+            ItemsHelper.ShowPrices("j52lg");
         }
+
+
     }
 }

@@ -7,8 +7,13 @@
         mc:Ignorable="d"
         Title="ShowRequest" Height="450" Width="800">
     <Grid>
-        <DataGrid Name="DataGrid">
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Name="DataGrid" Grid.Column="0">
+
         </DataGrid>
+        <WpfPlot Name="Chart" Grid.Column="1"/>
     </Grid>
 </Window>
