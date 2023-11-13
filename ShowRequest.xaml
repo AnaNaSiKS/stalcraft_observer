@@ -11,7 +11,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <DataGrid Name="DataGrid" Grid.Column="0">
+        <DataGrid Name="DataGrid" Grid.Column="0" >
 
         </DataGrid>
         <WpfPlot Name="Chart" Grid.Column="1"/>

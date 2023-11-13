@@ -24,15 +24,19 @@ namespace stalcraft_observer
         {
             InitializeComponent();
 
-            DataGrid.ItemsSource = prices;
+
 
             List<double> values = new List<double>();
+            List<dynamic> list = new List<dynamic>();  
 
             foreach (var value in prices)
             {
                 values.Add(value.Price);
+
+                list.Add(new { Amount = value.Amount, Price = value.Price, Time = value.Time});    
             }
             
+            DataGrid.ItemsSource = list; 
             Chart.Plot.AddBar(values.ToArray());
 
             //Chart.Plot.SetAxisLimits(yMin: 0);

@@ -12,16 +12,12 @@
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0" >
-            <ComboBox VerticalAlignment="Top">
-                <TextBlock Text="assault_rifle"/>
-                <TextBlock Text="device"/>
-                <TextBlock Text="heavy"/>
-                <TextBlock Text="machine_gun"/>
-                <TextBlock Text="melee"/>
-                <TextBlock Text="pistol"/>
-                <TextBlock Text="shotgun_rifle"/>
-                <TextBlock Text="sniper_rifle"/>
-                <TextBlock Text="submachine_gun"/>
+            <ComboBox VerticalAlignment="Top" Name ="WeaponClass" SelectionChanged="Weapon">
+                <ComboBoxItem Content="assault_rifle"/>
+
+            </ComboBox>
+            <ComboBox Name="NameId" SelectionChanged="History">
+                
             </ComboBox>
             <Button VerticalAlignment="Bottom" Height="60" Name="ButtonGetHistory" Click="ButtonGetHistory_Click"/>
         </StackPanel>
