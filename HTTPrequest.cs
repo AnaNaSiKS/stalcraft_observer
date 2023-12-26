@@ -21,8 +21,8 @@ namespace stalcraft_observer
                 RequestUri = new Uri($"https://eapi.stalcraft.net/ru/auction/{item}/history"),
                 Headers =
                 {
-                    { "Client-id", "275" },
-                    { "Client-Secret", "icwACm0QlFeURwORsflrjYiUHDPHedDHTHZiceGg" }
+                    { "Client-id", "" },
+                    { "Client-Secret", "" }
                 }
             };
             using (var response = await httpClient.SendAsync(request))
